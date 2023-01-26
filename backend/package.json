@@ -1,0 +1,33 @@
+{
+    "name": "tocolabdo",
+    "version": "0.0.0",
+    "description": "A colaboration TODO.",
+    "main": "app.js",
+    "scripts": {
+        "dev": "node app.js",
+        "build": "cd ../frontend/ && npm run build && cd ../backend/ && node app.js"
+    },
+    "author": "Daniel Gonçalves",
+    "keywords": [
+        "web",
+        "api",
+        "mongo",
+        "mongoose",
+        "rest"
+    ],
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.4",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-sanitizer": "^1.0.5",
+        "express-validator": "^6.2.0",
+        "fox-wamp": "^0.7.10",
+        "fs": "0.0.1-security",
+        "handlebars": "^4.5.3",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^5.7.12",
+        "nodemailer": "^6.3.1"
+    }
+}

@@ -1,15 +1,6 @@
 const CONFIG = require('../config/config');
 const http = require('http');
 const WampRouter = require('fox-wamp')
-
-const https = require('https');
-const fs = require('fs');
-
-const options = {
-    key: fs.readFileSync('../cert/danielmeiwpwa.ddns.net-key.pem'),
-    cert: fs.readFileSync('./cert/danielmeiwpwa.ddns.net-crt.pem')
-};
-
 class WampController {
     constructor() {
         this.httpServer = null;
@@ -17,10 +8,10 @@ class WampController {
     }
 
     init(app){
-        this.httpServer = https.createServer(options, app);
+        this.httpServer = http.createServer(app);
         this.router = new WampRouter();
                 
-        this.httpServer.listen(CONFIG.server.secureport);
+        this.httpServer.listen(CONFIG.server.port);
         this.router.listenWAMP({
             server: this.httpServer,
             path: "/ws"

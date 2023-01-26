@@ -222,9 +222,9 @@
             }
 
             let listId = window.location.pathname.replace(/\//g,'');
-            if (listId == "")
+            if (listId == null || listId == "")
                 listId = localStorage.getItem("lastListId");
-            if (listId == "")
+            if (listId == null || listId == "")
                 listId = Date.now().toString();
             
             localStorage.setItem("lastListId", listId)

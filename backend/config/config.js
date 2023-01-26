@@ -9,7 +9,8 @@ module.exports = {
         baseUrl: "com.tocolabdo."
     },
     server: {
-        port: 8081,
+        port: 80,
+        secureport: 443,
         host: "127.0.0.1"
     }
 }

@@ -16,7 +16,7 @@ library.add(faCircleCheck);
 
 var wampHost = window.location.host;
 if(process.env.NODE_ENV === 'development')
-    wampHost = window.location.host.replace(":5173", ":8081");
+    wampHost = window.location.host.replace(":5173", ":80");
 console.log('Connect to:  wss://' + wampHost + '/ws');
 var wamp = new autobahn.Connection({ url: 'wss://' + wampHost + '/ws', realm: 'realm1' });
 wamp.open();

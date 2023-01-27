@@ -44,6 +44,7 @@
         height: 80vh;
         border-radius: 0.5rem;
         overflow: hidden;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
     }
 
     header {

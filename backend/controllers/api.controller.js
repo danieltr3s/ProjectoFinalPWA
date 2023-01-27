@@ -1,4 +1,4 @@
-const Todos = require('../models/todolist.model');
+const Todos = require('../models/todo.model');
 const { validationResult } = require('express-validator');
 const WampServer = require('./wamp.controller');
 const wampController = require('./wamp.controller');

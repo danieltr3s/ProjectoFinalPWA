@@ -7,11 +7,11 @@ const {
 } = require('express-validator');
 
 router.route('/api/')
-    .post(ApiController.create);
+    .post(ApiController.create)
+    .put(ApiController.toggle);
 
 router.route('/api/:id')
     .get([param("id")], ApiController.get)
-    .put(ApiController.toggle);
 
 router.route('/api/:lid/:tid')
     .delete([param("lid"), param("tid")], ApiController.delete);

@@ -75,12 +75,14 @@
         },
         computed:{
             initials(){
+                if (this.user == undefined || this.user.name == undefined) 
+                    return "?";
                 let matches = this.user.name.match(/\b(\w)/g);
                 let acronym = matches.join('').slice(0, 2);
                 return acronym;
             },
             hasAvatar(){
-                return this.user.avatar != "";
+                return this.user != undefined && this.user.avatar != undefined && this.user.avatar != "";
             }
         }
     }

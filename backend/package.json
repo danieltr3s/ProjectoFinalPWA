@@ -5,7 +5,7 @@
     "main": "app.js",
     "scripts": {
         "dev": "node app.js",
-        "build": "cd ../frontend/ && npm run build && cd ../backend/ && node app.js"
+        "build": "cd ../frontend/ && npm i && npm run build && cd ../backend/ && npm i && node app.js"
     },
     "author": "Daniel Gonçalves",
     "keywords": [

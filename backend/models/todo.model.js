@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 const CONFIG = require('../config/config');
+const Schema = mongoose.Schema;
 
-const todoListSchema = new Schema({
+const todoSchema = new Schema({
     id: String,
     listId: String,
     text: String,
@@ -15,4 +15,4 @@ const todoListSchema = new Schema({
     }
 });
 
-module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.todolist, todoListSchema);
+module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.todolist, todoSchema);

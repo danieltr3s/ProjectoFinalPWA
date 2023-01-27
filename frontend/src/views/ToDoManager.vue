@@ -197,8 +197,9 @@
                     backdrop.remove();
                 }, 500);
 
-                localStorage.setItem("user", JSON.stringify({"name": modalText, "avatar":""}));
-                this.username = modalText;
+                let user = {"name": modalText, "avatar":""};
+                localStorage.setItem("user", JSON.stringify(user));
+                this.user = user;
             }
         },
         components: {

@@ -6,7 +6,7 @@ const https = require('https');
 const fs = require('fs');
 
 const options = {
-    key: fs.readFileSync('../cert/danielmeiwpwa.ddns.net-key.pem'),
+    key: fs.readFileSync('./cert/danielmeiwpwa.ddns.net-key.pem'),
     cert: fs.readFileSync('./cert/danielmeiwpwa.ddns.net-crt.pem')
 };
 
